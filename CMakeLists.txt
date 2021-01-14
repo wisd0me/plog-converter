@@ -64,6 +64,8 @@ add_library(plog STATIC
     Formats/gitlaboutput.h
     Formats/htmloutput.cpp
     Formats/htmloutput.h
+    Formats/junitoutput.cpp
+    Formats/junitoutput.h
     Formats/jsonoutput.h
     Formats/jsonoutput.cpp
     Formats/misracomplianceoutput.cpp

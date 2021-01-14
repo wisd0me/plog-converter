@@ -20,6 +20,7 @@
 #include "Formats/totalsoutput.h"
 #include "Formats/gitlaboutput.h"
 #include "Formats/defectdojooutput.h"
+#include "Formats/junitoutput.h"
 #include "outputfactory.h"
 
 namespace PlogConverter
@@ -54,7 +55,8 @@ OutputFactory::OutputFactory()
       CreateOutputFormatRecord<JsonOutput>(),
       CreateOutputFormatRecord<TotalsOutput>(),
       CreateOutputFormatRecord<GitLabOutput>(),
-      CreateOutputFormatRecord<DefectDojoOutput>()
+      CreateOutputFormatRecord<DefectDojoOutput>(),
+      CreateOutputFormatRecord<JUOutput>()
     }
 {
 }
