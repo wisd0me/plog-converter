@@ -12,6 +12,7 @@
 #include "Formats/simplehtml.h"
 #include "Formats/teamcityoutput.h"
 #include "Formats/sarifoutput.h"
+#include "Formats/junitoutput.h"
 
 namespace PlogConverter
 {
@@ -31,7 +32,8 @@ OutputFactory::OutputFactory()
       { "tasklist",      FactoryFunction<TaskListOutput>() },
       { "html",          FactoryFunction<SimpleHTMLOutput>() },
       { "teamcity",      FactoryFunction<TeamCityOutput>() },
-      { "sarif",         FactoryFunction<SarifOutput>() }
+      { "sarif",         FactoryFunction<SarifOutput>() },
+      { "junit",         FactoryFunction<JUOutput>() }
     }
 {
 }
