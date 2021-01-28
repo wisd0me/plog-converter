@@ -33,7 +33,7 @@ static void _Write(std::basic_ostream<char>& m_ostream, const Warning& msg)
   m_ostream << "  <testcase id=\"diagnostic\" name=\"" << msg.code << ' ' << loc << "\" time=\"0\">" << std::endl
             << "    <failure message=\"" << msg.code << ' ' << loc << "\" type=\"" << msg.GetLevelString() << "\">" << std::endl
             << "      " << msg.GetLevelString() << std::endl
-            << "      " << msg.message << std::endl;
+            << "      " << EscapeHtml(msg.message) << std::endl;
 
   auto extendedLines = msg.GetExtendedLines();
   if (extendedLines.size() > 1)
